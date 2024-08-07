@@ -1,0 +1,26 @@
+import sys
+
+input = sys.stdin.readline
+
+
+def find_unknown(N, M):
+    unheard = set()
+    for i in range(N):
+        person = input()
+        unheard.add(person)
+
+    unknown_cnt = 0
+    unknown_list = []
+    for j in range(M):
+        person = input()
+        if person in unheard:
+            unknown_cnt += 1
+            unknown_list.append(person)
+
+    unknown_list.sort()
+    return unknown_cnt, unknown_list
+
+
+unknown_cnt, unknown_list = find_unknown(*map(int, input().split()))
+print(unknown_cnt)
+print(*unknown_list, sep="")
