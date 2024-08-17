@@ -1,5 +1,5 @@
 #17952 - 과제는 끝나지 않아
-# memory: ,times: ,lang: python3
+# memory: 87412 KB,times: 1176 ms,lang: python3
 # 스택 사용 -> 현재 진행 과제, 완료 과제 나눠서 계산
 
 import sys 
