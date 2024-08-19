@@ -1,4 +1,5 @@
-# 95% 틀렸습니다.
+# 95% 틀렸습니다.: n이 1인 경우 비교를 하지 않으니 0 출력 & exit 호출
+# 33972KB, 148ms
 
 import sys
 import heapq
@@ -12,7 +13,8 @@ for i in range(n):
 heapq.heapify(heap)
 
 if n == 1:
-    print(heap[0])
+    print(0)
+    exit(0)
 
 sum = 0
 while len(heap) > 1:
