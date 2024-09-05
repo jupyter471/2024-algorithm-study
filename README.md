@@ -25,13 +25,17 @@
     <td align="center"><a href="https://github.com/jupyter471"><img src="https://avatars.githubusercontent.com/jupyter471" width="130px;" alt=""></a></td>
     <td align="center"><a href="https://github.com/YJY1220"><img src="https://avatars.githubusercontent.com/YJY1220" width="130px;" alt=""></a></td>
     <td align="center"><a href="https://github.com/wgwjh05169"><img src="https://avatars.githubusercontent.com/wgwjh05169" width="130px;" alt=""></a></td>
+    <td align="center"><a href="https://github.com/momnpa333"><img src="https://avatars.githubusercontent.com/momnpa333" width="130px;" alt=""></a></td>
+
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/jupyter471"><b>jupyter471</b></a></td>
     <td align="center"><a href="https://github.com/YJY1220"><b>YJY1220</b></a></td>
     <td align="center"><a href="https://github.com/wgwjh05169"><b>wgwjh05169</b></a></td>
+    <td align="center"><a href="https://github.com/momnpa333"><b>momnpa333</b></a></td>
   </tr>
   <tr> 
+    <td align="center"><img src="https://img.shields.io/badge/Python-3776AB?&style=for-the-badge&logo=python&logoColor=white"></td>
     <td align="center"><img src="https://img.shields.io/badge/Python-3776AB?&style=for-the-badge&logo=python&logoColor=white"></td>
     <td align="center"><img src="https://img.shields.io/badge/Python-3776AB?&style=for-the-badge&logo=python&logoColor=white"></td>
     <td align="center"><img src="https://img.shields.io/badge/Python-3776AB?&style=for-the-badge&logo=python&logoColor=white"></td>
