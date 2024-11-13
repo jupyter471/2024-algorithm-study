@@ -1,45 +1,40 @@
 import sys
-from collections import deque
 
 
-def bfs(start: int):
-    queue = deque()
-    queue.append(start)
-    visited = [False] * 2 ** n
-    level = 0
+def solution():
+    press_case = [(start[0] + 1) % 2] + [(start[1] + 1) % 2] + start[2:]
+    unpress_case = start[:]
 
-    while queue:
-        r = len(queue)
-        for _ in range(r):
-            num = queue.popleft()
-            if num == target:
-                return level
+    pcnt = 1
+    ucnt = 0
+    for i in range(1, n):
+        if press_case[i - 1] != target[i - 1]:
+            press_case[i - 1] = (press_case[i - 1] + 1) % 2
+            press_case[i] = (press_case[i] + 1) % 2
+            if i != n - 1:
+                press_case[i + 1] = (press_case[i + 1] + 1) % 2
+            pcnt += 1
 
-            number = num ^ 3
-            if not visited[number]:
-                queue.append(number)
-                visited[number] = True
+        if unpress_case[i - 1] != target[i - 1]:
+            unpress_case[i - 1] = (unpress_case[i - 1] + 1) % 2
+            unpress_case[i] = (unpress_case[i] + 1) % 2
+            if i != n - 1:
+                unpress_case[i + 1] = (unpress_case[i + 1] + 1) % 2
+            ucnt += 1
 
-            number = num ^ (3 << (n - 2))
-            if not visited[number]:
-                queue.append(number)
-                visited[number] = True
+    if press_case[-1] == target[-1] and unpress_case[-1] == target[-1]:
+        return min(pcnt, ucnt)
 
-            for di in range(n-2):
-                number = num ^ (7 << di)
-                if not visited[number]:
-                    queue.append(number)
-                    visited[number] = True
-
-        level += 1
+    if press_case[-1] == target[-1]:
+        return pcnt
+    if unpress_case[-1] == target[-1]:
+        return ucnt
 
     return -1
 
 
 n = int(sys.stdin.readline())
-present = int(sys.stdin.readline(), base=2)
-target = int(sys.stdin.readline(), base=2)
+start = list(map(int, sys.stdin.readline().rstrip()))
+target = list(map(int, sys.stdin.readline().rstrip()))
 
-print(bfs(present))
-
-# bin(n).lstrip('0b').zfill(n)
+print(solution())
